@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6554A781-DF86-4D4A-99AC-DF36311D2823"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B86A4B5-6516-4FE4-B061-086B9D9744DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDo/View/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "864692C9-014C-420E-BD50-9FCA59BE1A5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Task+CoreDataProperties.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "Status"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "864692C9-014C-420E-BD50-9FCA59BE1A5F - f1295c6769f033ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDo.Status.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;ToDo.Status&gt;"
+                  moduleName = "ToDo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuda/Desktop/iOS/Projects/ToDo/Task+CoreDataProperties.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  uuid = "864692C9-014C-420E-BD50-9FCA59BE1A5F - fb73321705d83043"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDo.Status.rawValue.getter : Swift.String"
+                  moduleName = "ToDo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuda/Desktop/iOS/Projects/ToDo/Task+CoreDataProperties.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
