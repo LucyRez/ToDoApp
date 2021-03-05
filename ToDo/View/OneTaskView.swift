@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+Структура для вью задачи
+ */
 struct TaskView : View{
     var name: String
     var note : String

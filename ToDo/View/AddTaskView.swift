@@ -13,7 +13,7 @@ struct AddTaskView: View{
     @State var statusSelected = Status.new
     @Environment(\.managedObjectContext) var context
     
-    let statusArray = ["New", "In Process", "Completed"]
+    let statusArray = ["New", "In Progress", "Completed"]
     
     init(task:TaskViewModel){
         UITextView.appearance().backgroundColor = .clear
@@ -35,11 +35,10 @@ struct AddTaskView: View{
             
             Picker("Current status:",selection: $statusSelected){
                 Text("New").tag(Status.new)
-                Text("In Progress").tag(Status.inProcess)
+                Text("In Progress").tag(Status.inProgress)
                 Text("Completed").tag(Status.completed)
-            }
+            }.pickerStyle(InlinePickerStyle())
             
-            //Spacer(minLength: 160)
             
             Button(action: {
                 task.status = statusSelected.rawValue

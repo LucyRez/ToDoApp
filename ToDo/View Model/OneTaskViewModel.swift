@@ -29,17 +29,24 @@ class TaskViewModel: ObservableObject{
     @Published var task:Task!
     @Published var edited:Task!
     
-    
+    /**
+      Функция для записи данных в базу
+     
+     - parameter context: Текущий контекст.
+     */
     func writeData(context: NSManagedObjectContext){
         
+        // Если редактируем, а не создаём новую задачу.
         if edited != nil {
+            // Редактируемая задача получает значения полей модели
             edited.date = date
             edited.note = note
             edited.name = name
             edited.status = status
             
-            try! context.save()
+            try! context.save() // Пытаемся сохранить контекст.
             
+            // Присваиваем назад дефолтные значения
             edited = nil
             isNew.toggle()
             date = Date()
@@ -49,6 +56,7 @@ class TaskViewModel: ObservableObject{
             return
         }
         
+        // Если создаётся новая задача, получаем все данные из контекста
         let newTask = Task(context: context)
         newTask.name = name
         newTask.note = note
@@ -58,6 +66,7 @@ class TaskViewModel: ObservableObject{
         do{
             try context.save()
             
+            // После попытки сохраниться возвращаем дефолтные значения
             isNew.toggle()
             date = Date()
             status = ""
@@ -69,6 +78,11 @@ class TaskViewModel: ObservableObject{
         }
     }
     
+    /**
+     Функция инициализирует редактирование задачи.
+     
+     - parameter task: Редактируемая задача.
+     */
     func edit(task: Task){
         edited = task
         self.name = task.name

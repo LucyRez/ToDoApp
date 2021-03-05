@@ -13,8 +13,21 @@ struct ListTaskView : View {
     
     @StateObject var task = TaskViewModel()
     @Environment(\.managedObjectContext) var context
-    @FetchRequest (entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)], animation: .spring()) var results : FetchedResults<Task>
-
+    
+    var results: FetchedResults<Task>{
+        fetchRequest.wrappedValue
+    }
+    
+    var fetchRequest: FetchRequest<Task>
+    
+    init(filter: String){
+        if filter != "" {
+            fetchRequest = FetchRequest<Task>(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)], predicate: NSPredicate(format: "status BEGINSWITH %@", filter))
+            
+        }else{
+            fetchRequest = FetchRequest (entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: false)])
+        }
+    }
     
     var body: some View{
         NavigationView{
@@ -52,7 +65,7 @@ struct ListTaskView : View {
 
 struct ListTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        ListTaskView()
+        ListTaskView(filter: "New")
         
     }
 }

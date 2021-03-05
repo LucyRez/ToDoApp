@@ -22,7 +22,7 @@ import CoreData
  */
 enum Status:String{
     case new = "New"
-    case inProcess = "In Process"
+    case inProgress = "In Progress"
     case completed = "Completed"
 }
 
